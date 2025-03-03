@@ -10,24 +10,24 @@
     <link rel="stylesheet" href="styles.css" />
 
     <main>
-      <h1>Talk For Me</h1>
-
-      <!-- Choose a language -->
-      <div>
-        <h3>Choose Language</h3>
-        <div id="lang-select-container" class="select-container"></div>
-      </div>
-
-      <!-- Choose a voice -->
-      <div>
-        <h3>Choose Voice</h3>
-        <div id="voice-select-container" class="select-container"></div>
-      </div>
+      <h1 style="text-decoration: underline">Talk For Me</h1>
 
       <!-- Input and play -->
       <div class="play-text-container">
-        <input id="user-input-text" type="text" />
+        <textarea id="user-input-text" rows="4"></textarea>
         <button onclick="handlePlay()">Play</button>
+      </div>
+
+      <!-- Choose a language -->
+      <div class="">
+        <h3>Choose Language</h3>
+        <div id="lang-select-container" class="select-container card"></div>
+      </div>
+
+      <!-- Choose a voice -->
+      <div class="">
+        <h3>Choose Voice</h3>
+        <div id="voice-select-container" class="select-container card"></div>
       </div>
     </main>
   </body>
