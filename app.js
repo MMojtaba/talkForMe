@@ -1,10 +1,13 @@
 const synth = window.speechSynthesis;
 const utterance = new SpeechSynthesisUtterance();
+const DEFAULT_LANGUAGE = "en-US";
+
 let voices = [];
 let languages = [];
 let langVoiceMap = {};
 let currLang;
 let currVoice;
+let defaultLangIndex;
 
 function init() {
   // Find English voices
@@ -23,7 +26,9 @@ function init() {
     );
   }
 
-  currLang = languages[0];
+  defaultLangIndex = languages.findIndex((lang) => lang === DEFAULT_LANGUAGE);
+  currLang =
+    defaultLangIndex === -1 ? languages[0] : languages[defaultLangIndex];
   voices = langVoiceMap[currLang];
   currVoice = voices[0];
 
@@ -50,7 +55,14 @@ function createLanguageElements() {
     const inputEl = document.createElement("input");
     inputEl.setAttribute("type", "radio");
     inputEl.setAttribute("name", radioName);
-    if (index === 0) inputEl.setAttribute("checked", "checked");
+
+    // Check the default language if exists, otherwise the first
+    if (
+      (defaultLangIndex === -1 && index === 0) ||
+      defaultLangIndex === index
+    ) {
+      inputEl.setAttribute("checked", "checked");
+    }
     inputEl.setAttribute("value", lang);
     inputEl.setAttribute("onchange", "handleLangChange(value)");
     labelEl.appendChild(inputEl);
