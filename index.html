@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <main>
+      <h1>Talk For Me</h1>
+
+      <!-- Choose a language -->
+      <div>
+        <h3>Choose Language</h3>
+        <div id="lang-select-container" class="select-container"></div>
+      </div>
+
+      <!-- Choose a voice -->
+      <div>
+        <h3>Choose Voice</h3>
+        <div id="voice-select-container" class="select-container"></div>
+      </div>
+
+      <!-- Input and play -->
+      <div class="play-text-container">
+        <input id="user-input-text" type="text" />
+        <button onclick="handlePlay()">Play</button>
+      </div>
+    </main>
+  </body>
+</html>

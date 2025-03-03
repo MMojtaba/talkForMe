@@ -1,0 +1,43 @@
+body {
+  background-color: rgb(13, 20, 49);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  padding: 0.3rem;
+}
+
+.select-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.play-text-container {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.play-text-container input {
+  width: 40%;
+}
+
+.play-text-container button {
+  width: 5rem;
+  height: 2rem;
+  background-color: rgb(56, 159, 44);
+  padding: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.play-text-container button:hover {
+  background-color: rgb(49, 146, 38);
+}
