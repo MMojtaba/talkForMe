@@ -35,6 +35,11 @@ function init() {
   createLanguageElements();
 
   createVoiceElements();
+
+  // Allow using enter key to play
+  document.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") handlePlay();
+  });
 }
 setTimeout(init, 200);
 

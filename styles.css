@@ -27,8 +27,9 @@ main {
   align-items: center;
 }
 
-.play-text-container textarea {
+.play-text-container input {
   width: 90%;
+  height: 2rem;
 }
 
 .play-text-container button {
